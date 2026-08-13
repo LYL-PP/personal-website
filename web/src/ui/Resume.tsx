@@ -1,25 +1,6 @@
 import { motion } from 'framer-motion'
-import { ZooopLogo } from './ZooopLogo'
 import { SOCIAL_ICONS } from './SocialIcons'
 import { FOCUS_POINTS } from '../data/focusPoints'
-
-const SOCIAL_LINKS = [
-  {
-    id: 'douyin',
-    label: '抖音',
-    href: 'https://www.douyin.com/user/MS4wLjABAAAAlmQDgHf0NlbsjrfWENm8LyrIikxSRRq7mzlzQSIStQJkV7Ju52B6A55zw5TUDU5d',
-  },
-  {
-    id: 'bilibili',
-    label: 'B站',
-    href: 'https://space.bilibili.com/275344092?spm_id_from=333.937.0.0',
-  },
-  {
-    id: 'xiaohongshu',
-    label: '小红书',
-    href: 'https://www.xiaohongshu.com/user/profile/5ceba8c8000000000502fd69',
-  },
-]
 
 // 履历数据（双语）。英文为译稿，可按需润色。
 interface ResumeGroup {
@@ -44,49 +25,45 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
     title: 'Résumé',
     entries: [
       {
-        period: '2013 – 2017',
+        period: '2026.09 – 2028.07',
+        place: 'The Chinese University of Hong Kong, Shenzhen',
+        role: 'M.Sc. in Data Science (enrolled)',
+      },
+      {
+        period: '2022.09 – 2026.07',
         place: 'Sun Yat-sen University',
-        role: 'B.S. in Software Engineering',
+        role: 'B.B.A. in Business Administration',
       },
       {
-        period: '2017 – 2020',
-        place: 'HOTSAR Studio · Shanghai',
-        role: 'Co-founder',
-        logo: { src: `${import.meta.env.BASE_URL}images/hotsar.jpg`, alt: 'HOTSAR' },
+        period: '2026.01 – 2026.04',
+        place: 'Chengdu Shusheng Technology',
+        role: 'AI Product Manager Intern',
         points: [
-          'Co-founder · team of 20+',
-          'Clients: Alibaba brands, Tencent, NetEase, DiDi, China Resources, McDonald’s…',
-          'Work: development / creative direction / animation / team management',
+          'Helped build a sales AI agent covering night-shift standby, conversion Q&A and proactive needs-discovery: designed the collaboration workflow across four agents (intent recognition, needs-discovery, Q&A, safety check) on a modular FAQ / intent / SOP configuration, with a tiered human-handoff mechanism; overall intent-classification F1 90%+, response accuracy 90%+, and 40%+ deal rate on handed-off high-intent leads.',
+          'Helped build an AI sales quality-inspection system with differentiated scoring criteria for key actions (needs-discovery, progress review, course pitching, closing); inspection accuracy 95%+.',
+          'Helped build a conversation-data-based user profiling & tagging system: designed 100+ tags and extraction rules with T+1 auto-tagging via agents; core tag accuracy 85%+.',
+          'Contributed to lead-scoring prediction and conversion strategy on 150K+ historical samples (baseline conversion ~5.4%): feature selection, data cleaning, baseline evaluation and tier thresholds; Top 30% high-potential leads converted at 16.4% (~3× baseline).',
         ],
       },
       {
-        period: '2020 – 2025',
-        place: 'Bad Printer Studio · Shenzhen',
-        role: 'Founder',
-        logo: { src: `${import.meta.env.BASE_URL}images/bp.png`, alt: 'Bad Printer Studio' },
+        period: '2025.07 – 2025.11',
+        place: 'JD.com',
+        role: 'International Supply Chain PM Intern',
         points: [
-          'Founder · team of 14',
-          'Clients: Honor of Kings / Trip.com / ByteDance / Kuaishou / VIVO / Tecno / Xiaomi / IM Motors…',
-          'Work: team management / creative direction / animation / development',
+          'Independently led the design of an international supply-chain charging mechanism with a full PRD: abstracted standard billing nodes (inbound, outbound, trunk line, customs clearance, last mile) and consolidated 50+ offline billing scenarios into system modules (fee-item management, rule configuration, service orders, approval, receivables, settlement & reconciliation, exception adjustment), covering a department-level business at tens-of-billions scale.',
+          'Owned the 0-to-1 design and launch of Europe cross-border line products: designed time-priority, cost-priority and balanced route plans validated on end-to-end metrics (on-time fulfillment, delivery success, exception rate, tracking completeness), covering 10+ European countries with 20K+ monthly orders after launch.',
+          'Located fulfillment bottlenecks via the end-to-end metrics system and drove process & product optimization: +15% timely pickup rate, +8% final delivery rate, ~10% overall P&L improvement.',
         ],
       },
       {
-        period: '2025 – Now',
-        place: 'Content Creator',
-        groups: [
-          {
-            heading: '小郑还挺忙',
-            logoImg: `${import.meta.env.BASE_URL}images/buzyzheng.png`,
-            sub: 'tech-DIY creator',
-            items: ['120K on Douyin · 87K on Bilibili · 23K on Xiaohongshu'],
-            links: SOCIAL_LINKS,
-          },
+        period: '2024.12 – 2025.04',
+        place: 'CICC (CICC Wealth Management)',
+        role: 'Investment Management Middle-Platform Product Intern',
+        points: [
+          'Contributed to middle-platform systems across the full asset-management product lifecycle (creation, issuance, filing, operation), structuring core elements — risk level, client suitability, fee structure, benchmark, subscription/redemption rules — into system fields and configuration rules.',
+          'Built Python-based data automation pipelines processing 100K+ daily records of subscription/redemption flows, NAV and holdings, supporting regulatory reports and post-investment reporting.',
+          'Benchmarked competing products on structure, fees, risk level and redemption terms; delivered 5 research reports informing middle-platform capability planning.',
         ],
-      },
-      {
-        period: '2026 – Now',
-        place: 'Indie Developer',
-        groups: [{ logo: 'zooop', sub: 'AI creation platform', link: 'https://zooop.ai/' }],
       },
     ],
   },
@@ -94,49 +71,45 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
     title: 'Résumé',
     entries: [
       {
-        period: '2013 – 2017',
+        period: '2026.09 – 2028.07',
+        place: '香港中文大学（深圳）',
+        role: '数据科学 · 硕士（在读）',
+      },
+      {
+        period: '2022.09 – 2026.07',
         place: '中山大学',
-        role: '软件工程 · 本科',
+        role: '工商管理 · 本科',
       },
       {
-        period: '2017 – 2020',
-        place: 'HOTSAR 工作室 · 上海',
-        role: '联合创始人',
-        logo: { src: `${import.meta.env.BASE_URL}images/hotsar.jpg`, alt: 'HOTSAR' },
+        period: '2026.01 – 2026.04',
+        place: '成都书声科技有限公司',
+        role: 'AI 产品经理实习生',
         points: [
-          '联合创始人，团队人数 20+',
-          '服务客户：阿里系品牌、腾讯、网易、滴滴、华润、麦当劳…',
-          '负责：技术开发 / 创意策划 / 动画制作 / 团队管理',
+          '参与搭建销售 AI 智能体，覆盖夜间值守、转化答疑、主动挖需等场景：设计意图识别、主动挖需、答疑、安全检测四类 Agent 的协作工作流，基于 FAQ 知识库、意图分类与 SOP 模块化配置承接用户咨询，并围绕安全风险、高意向转化、知识边界建立分层转人工机制；项目意图分类整体 F1 达 90%+、用户回复准确率达 90%+，高意向线索转人工后成交率达 40%+；',
+          '参与搭建 AI 销售质检体系，围绕挖需、学情点评、铺课、关单等关键动作设计差异化评分标准，质检准确率达 95%+；',
+          '参与建设基于会话数据的用户画像与标签系统，设计 100+ 标签及抽取规则，结合 Agent 实现 T+1 自动打标与规则迭代，核心标签准确率达 85%+；',
+          '参与客户线索分级预测与销售转化策略项目，基于 15w+ 历史样本（基线转化率约 5.4%）设计 AI 侧产品方案，完成特征筛选、数据清洗、baseline 评估与分级阈值设计；内部特征模型下 Top 30% 高潜线索转化率达 16.4%（约 3 倍基线）。',
         ],
       },
       {
-        period: '2020 – 2025',
-        place: '坏打印机工作室 · 深圳',
-        role: '创始人',
-        logo: { src: `${import.meta.env.BASE_URL}images/bp.png`, alt: '坏打印机工作室' },
+        period: '2025.07 – 2025.11',
+        place: '京东',
+        role: '国际供应链产品经理实习生',
         points: [
-          '创始人，团队人数 14',
-          '服务客户：王者荣耀 / 携程 / 字节 / 快手 / VIVO / 传音 / 小米…',
-          '负责：团队管理 / 创意策划 / 动画制作 / 技术开发',
+          '独立主导国际供应链收费机制产品设计，输出完整 PRD：按履约链路抽象入库、出库、干线、清关、尾程等标准计费节点，将 50+ 线下计费场景沉淀为费用项管理、计费规则配置、服务单创建、审批确认、应收生成、结算对账、异常调账等系统模块，覆盖部门级百亿规模业务，显著降低人工调账与漏收风险；',
+          '独立负责欧洲跨境线路产品从 0 到 1 的方案设计与上线：设计时效优先、成本优先与均衡三类线路方案，以端到端时效达成率、准时妥投率、异常率、轨迹回传完整率为核心指标完成试跑验证，覆盖欧洲 10 余国，上线后月均单量 2 万+ 单；',
+          '围绕国际供应链全链路指标体系定位履约瓶颈，推动流程与产品优化，实现及时揽收率提升 15%、尾单妥投率提升 8%、整体损益改善约 10%。',
         ],
       },
       {
-        period: '2025 – 至今',
-        place: '自媒体博主',
-        groups: [
-          {
-            heading: '小郑还挺忙',
-            logoImg: `${import.meta.env.BASE_URL}images/buzyzheng.png`,
-            sub: '科技 DIY 博主',
-            items: ['抖音 12 万 · B站 8.7 万 · 小红书 2.3 万 关注'],
-            links: SOCIAL_LINKS,
-          },
+        period: '2024.12 – 2025.04',
+        place: '中金公司（中金财富）',
+        role: '投资管理中台产品实习生',
+        points: [
+          '围绕资产管理产品全生命周期（创设、发行、备案、运作）参与中台系统建设，将风险等级、客户适当性、费用结构、业绩比较基准、申赎规则等核心要素结构化为系统字段与配置规则；',
+          '使用 Python 搭建数据自动化处理流程，日均处理 10w+ 条申赎流水、产品净值及持仓数据，支撑监管报表、投后报告生成；',
+          '围绕产品结构、费率设计、风险等级、申赎安排等维度对同类竞品进行对标分析，输出研究报告 5 份，为中台产品能力建设提供决策参考。',
         ],
-      },
-      {
-        period: '2026 – 至今',
-        place: '独立开发',
-        groups: [{ logo: 'zooop', sub: 'AI 创作平台', link: 'https://zooop.ai/' }],
       },
     ],
   },
@@ -157,24 +130,13 @@ const itemV = {
 }
 
 function Group({ group }: { group: ResumeGroup }) {
-  const heading =
-    group.logo === 'zooop' ? (
-      <a
-        className="zooop-logo-link"
-        href={group.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="ZOOOP"
-      >
-        <ZooopLogo className="zooop-logo" animated />
-      </a>
-    ) : group.link ? (
-      <a className="about-link" href={group.link} target="_blank" rel="noopener noreferrer">
-        {group.heading}
-      </a>
-    ) : (
-      <span>{group.heading}</span>
-    )
+  const heading = group.link ? (
+    <a className="about-link" href={group.link} target="_blank" rel="noopener noreferrer">
+      {group.heading}
+    </a>
+  ) : (
+    <span>{group.heading}</span>
+  )
 
   return (
     <motion.div className="tl-group" variants={itemV}>

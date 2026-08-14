@@ -1,5 +1,6 @@
 ---
 title: AI 销售增长智能体（Growth Agent）
+banner: /works/covers/ai-demo.png
 year: 2026
 role: 独立设计 / 开发
 tags: [AI 产品 Demo, Next.js, TypeScript, DeepSeek API]

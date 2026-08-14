@@ -403,8 +403,9 @@ canvas {
 
 /* ---------- 履历时间轴 ---------- */
 .resume {
-  /* 正文与 resume 间距拉大约一倍 */
-  padding: 20vh 24px 20vh;
+  /* 正文与 resume 间距拉大约一倍；底部留白 10vh（与末条尾部合计约 29vh，
+     约为原值一半，缩短履历结束到作品区之间的滚动距离） */
+  padding: 20vh 24px 10vh;
 }
 
 .resume-title {
@@ -445,9 +446,9 @@ canvas {
 }
 
 .tl-entry:last-child {
-  /* 末条尾部空间：与 .resume 底部 padding 合计约 70vh，
-     使滚到底时末条顶部正好停在视口 30vh（NODE_LINE）处、动画走满末帧 */
-  padding-bottom: 38vh;
+  /* 末条尾部空间：与 .resume 底部 padding 合计约 29vh（原 58vh 的一半）。
+     相机按条目/画廊实测位置驱动，尾部缩短后运镜仍自动对齐 */
+  padding-bottom: 19vh;
 }
 
 .tl-dot {

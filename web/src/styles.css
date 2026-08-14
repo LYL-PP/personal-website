@@ -385,8 +385,8 @@ canvas {
 .tl-entry {
   position: relative;
   padding-left: 34px;
-  /* 拉长节点间距：每条履历约占一屏，便于相机随滚动依次聚焦对应锚点 */
-  padding-bottom: 46vh;
+  /* 条目间距：约 46vh 的 1/3（相机按条目实测位置停靠，压缩间距不影响运镜对齐） */
+  padding-bottom: 15vh;
 }
 
 .tl-entry:last-child {

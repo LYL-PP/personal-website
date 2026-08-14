@@ -44,6 +44,8 @@ export interface WorksLang {
   hint: string
   awardsLabel: string
   visitLabel: string
+  detailLabel: string
+  demoLabel: string
   detailPlaceholder: string
   phImageLabel: string
   phButtonLabel: string
@@ -59,6 +61,8 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     hint: '继续下滑',
     awardsLabel: '获奖',
     visitLabel: '访问作品',
+    detailLabel: '查看详情',
+    demoLabel: '体验链接',
     detailPlaceholder: '你的作品介绍',
     phImageLabel: '图片 / 视频',
     phButtonLabel: '跳转按钮',
@@ -119,6 +123,8 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
     hint: 'Keep scrolling',
     awardsLabel: 'Awards',
     visitLabel: 'Visit site',
+    detailLabel: 'Details',
+    demoLabel: 'Live demo',
     detailPlaceholder: 'Your work description',
     phImageLabel: 'Image / Video',
     phButtonLabel: 'Link button',

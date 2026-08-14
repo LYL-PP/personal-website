@@ -8,8 +8,17 @@ import { getWorkDoc } from '../data/workDocs'
 
 const EASE = [0.22, 1, 0.36, 1]
 
-// 极简清单的一行：作品名靠左、数据(播放量/标签)靠右、发丝线分隔；整行可点开全屏详情
-function WorkLine({ item, onOpen }: { item: WorkListItem; onOpen: (item: WorkListItem) => void }) {
+// 极简清单的一行：作品名靠左、数据(播放量/标签)靠右、发丝线分隔；
+// 行下方两个动作按钮：查看详情（开全屏详情）/ 体验链接（外链，无链接显示占位）
+function WorkLine({
+  item,
+  data,
+  onOpen,
+}: {
+  item: WorkListItem
+  data: WorksLang
+  onOpen: (item: WorkListItem) => void
+}) {
   const hasMeta = item.meta || (item.tags && item.tags.length)
   return (
     <li className="wk-line">
@@ -27,6 +36,20 @@ function WorkLine({ item, onOpen }: { item: WorkListItem; onOpen: (item: WorkLis
           </span>
         )}
       </button>
+      <div className="wk-actions">
+        <button className="wk-action" onClick={() => onOpen(item)}>
+          {data.detailLabel}
+        </button>
+        {item.link ? (
+          <a className="wk-action" href={item.link} target="_blank" rel="noopener noreferrer">
+            {data.demoLabel} <span aria-hidden="true">↗</span>
+          </a>
+        ) : (
+          <span className="wk-action is-ph" role="button" aria-disabled="true">
+            {data.demoLabel}【待补充】
+          </span>
+        )}
+      </div>
     </li>
   )
 }
@@ -82,7 +105,7 @@ function SectionWorks({
       {section.items && (
         <ul className="wk-list">
           {section.items.map((it, i) => (
-            <WorkLine key={i} item={it} onOpen={onOpen} />
+            <WorkLine key={i} item={it} data={data} onOpen={onOpen} />
           ))}
         </ul>
       )}
@@ -93,7 +116,7 @@ function SectionWorks({
             <div className="wk-sub-head">{g.heading}</div>
             <ul className="wk-list">
               {g.items.map((it, i) => (
-                <WorkLine key={i} item={{ name: it }} onOpen={onOpen} />
+                <WorkLine key={i} item={{ name: it }} data={data} onOpen={onOpen} />
               ))}
             </ul>
           </div>

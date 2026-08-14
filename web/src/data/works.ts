@@ -73,7 +73,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
           {
             name: 'AI 销售增长智能体（Growth Agent）',
             meta: '2026.01 – 2026.05',
-            tags: ['Next.js', 'TypeScript', 'DeepSeek API'],
+            tags: ['Next.js', 'TypeScript'],
             link: 'https://ai-sales-growth-agent.vercel.app/',
             slug: 'growth-agent',
           },
@@ -133,7 +133,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
           {
             name: 'AI Sales Growth Agent',
             meta: '2026.01 – 2026.05',
-            tags: ['Next.js', 'TypeScript', 'DeepSeek API'],
+            tags: ['Next.js', 'TypeScript'],
             link: 'https://ai-sales-growth-agent.vercel.app/',
             slug: 'growth-agent',
           },

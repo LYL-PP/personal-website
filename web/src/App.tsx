@@ -29,7 +29,7 @@ const COPY = {
       'Aspiring AI Product Manager with a hybrid background in business and data science. Three product internships spanning AI products, supply-chain platforms and fintech middle-platforms; independently shipped a live AI product demo and a 3D game, and writes AI product reviews for a tech media account with 200K+ followers. I believe PMs who understand the boundaries of model capabilities will define the products of the next era.',
       'Skills — AI Products: prompt design & iteration, multi-agent workflow design, knowledge base / RAG application, model evaluation & benchmark design, human-AI collaboration workflows; able to independently ship live product demos via AI-assisted development (Next.js / Three.js).',
       'Product: requirement analysis & decomposition, business process modeling, PRD writing, prototyping (Axure / Figma) ｜ Data: SQL, Python, Excel ｜ Language: English (CET-6 620 / IELTS 7.0)',
-      'Contact: 18011594058 · applebanana202210@163.com · GitHub【链接】 · WeChat Official Account【名称】',
+      'Contact: 18011594058 · applebanana202210@163.com · GitHub: github.com/LYL-PP · WeChat Official Account【名称】',
     ],
   },
   zh: {
@@ -38,7 +38,7 @@ const COPY = {
       'AI 产品经理方向。商科 + 数据科学复合背景，三段产品实习覆盖 AI 产品、供应链中台与金融中台；独立完成过可上线的 AI 产品 Demo 与 3D 游戏，也是 20W+ 粉丝科技公众号的 AI 评测撰稿人。相信理解模型能力边界的产品经理，才能定义下一个时代的产品。',
       '技能 —— AI 产品：Prompt 设计与迭代、多 Agent 流程设计、知识库/RAG 应用、模型效果评估与评测方案设计、人机协作工作流设计；能以 AI 协作方式独立完成可上线的产品 Demo（Next.js / Three.js）。',
       '产品能力：需求分析与拆解、业务流程建模、PRD 撰写、原型设计（Axure / Figma）｜数据分析：SQL、Python、Excel｜语言能力：英语（CET-6 620 / IELTS 7.0）',
-      '联系方式：18011594058 · applebanana202210@163.com · GitHub【链接】 · 公众号【名称】',
+      '联系方式：18011594058 · applebanana202210@163.com · GitHub: github.com/LYL-PP · 公众号【名称】',
     ],
   },
 }
@@ -85,11 +85,11 @@ function Hero({ lang, cueOpacity }: { lang: Lang; cueOpacity: MotionValue<number
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
             </a>
-            <span className="is-ph" role="link" aria-disabled="true" aria-label="GitHub" title="GitHub【链接待补充】">
+            <a href="https://github.com/LYL-PP" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="github.com/LYL-PP">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.53-1.32-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.41-5.26 5.7.41.36.78 1.06.78 2.14v3.16c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
               </svg>
-            </span>
+            </a>
           </motion.div>
         </div>
       </motion.div>

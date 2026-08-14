@@ -45,13 +45,15 @@ const COPY = {
 
 function Hero({ lang, cueOpacity }: { lang: Lang; cueOpacity: MotionValue<number> }) {
   const { title, paragraphs } = COPY[lang]
-  const aboutRef = useRef(null)  // 触发起点提前：about 顶部位于视口 60% 处即开始（offset[0] 进度 0），到达顶部为进度 1
+  const aboutRef = useRef(null)
+  // 触发起点：about 顶部位于视口 95% 处为进度 0，到达视口顶部为进度 1。
+  // 起点取 0.95 而非更早：about 块含多段正文+图标行后较高，块顶在首屏已高于视口 60%，
+  // 若从 0.6 起算，页面未滚动时淡出进度就已过半（标题发虚）。
   const { scrollYProgress } = useScroll({
     target: aboutRef,
-    offset: ['start 0.6', 'start start'],
+    offset: ['start 0.95', 'start start'],
   })
-  // 透明度在 about 顶部升到约 30vh 时归 0：起点 60%→进度 p 时顶部在 0.6×(1−p)，
-  // 令 =0.3 解得 p=0.5，故 opacity 区间 [0, 0.5]
+  // 滚动前半程完成模糊+透明淡出（约 0.45 倍视口高度的滚动内）
   const blur = useTransform(scrollYProgress, [0, 0.5], ['blur(0px)', 'blur(16px)'])
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
   // 视差：标题上升更快、字距随滚动拉开；正文上升慢一点

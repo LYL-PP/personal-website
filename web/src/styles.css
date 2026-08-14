@@ -1310,6 +1310,15 @@ canvas {
   letter-spacing: 0.04em;
 }
 
+/* 板块描述段：卡片底部留白区的项目简介 */
+.wk-desc {
+  margin-top: clamp(18px, 3vh, 28px);
+  font-size: clamp(12px, 1.15vw, 14px);
+  line-height: 1.85;
+  color: rgba(244, 241, 234, 0.62);
+  max-width: 62ch;
+}
+
 /* 中文作品区：行距放宽 */
 .works[lang='zh'] .wk-line-name {
   line-height: 1.5;

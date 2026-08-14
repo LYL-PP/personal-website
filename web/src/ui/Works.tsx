@@ -141,6 +141,9 @@ function SectionWorks({
           {section.footer && <p className="wk-foot-line">{section.footer}</p>}
         </div>
       )}
+
+      {/* 板块描述段：填充卡片底部留白 */}
+      {section.desc && <p className="wk-desc">{section.desc}</p>}
     </div>
   )
 }

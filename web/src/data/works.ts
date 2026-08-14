@@ -35,6 +35,7 @@ export interface WorkSection {
   groups?: WorkGroup[]
   awards?: string[]
   footer?: string
+  desc?: string
 }
 
 export interface WorksLang {
@@ -83,6 +84,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
           },
         ],
         footer: 'Prompt Engineering · 多 Agent 流程设计 · 知识库/RAG 应用',
+        desc: '独立设计并部署上线的「AI 销售副驾驶」。针对销售“该跟谁、说什么、要不要转人工”的决策难题，通过 Prompt Engineering 让单次模型调用并行输出意图分类、阶段判断、风险评估等六维结构化分析，每个判断均附置信度与推理依据，让 AI 的每个建议都可解释、可追溯。',
       },
       {
         id: 'ai-collab',
@@ -99,6 +101,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
           },
         ],
         footer: '里程碑拆解 · 提示词工程 · 长程任务上下文管理 · 自动化验收',
+        desc: '与大模型协作完成的 3D 推理游戏：把整本侦探小说改编为可玩的第一人称游戏。我设计“模型研读原著 → 自提炼提示词 → 人工审查校准 → 分阶段执行”的人机协作工作流，按里程碑拆解任务并逐阶段验收；人只做需求定义与关键决策，AI 完成 70%+ 的执行，最终交付完整可玩的成品。',
       },
       {
         id: 'ai-review',
@@ -115,6 +118,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
           },
         ],
         footer: '真实场景极限实测 · 同题横向对比 · 选型建议',
+        desc: '20W+ 粉丝科技公众号的合作撰稿人，以产品经理视角实测大模型、办公 Agent、视频生成等 AI 工具。不依赖官方 Demo 和榜单，自主设计真实场景的极限任务做横向对比，从效果、成本、场景适配形成选型判断。累计阅读量 10w+，单篇最高 5w+，多次在新品发布两天内完成深度首测。',
       },
     ],
   },
@@ -147,6 +151,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
           },
         ],
         footer: 'Prompt engineering · Multi-agent workflow design · Knowledge base / RAG',
+        desc: 'An “AI sales copilot” independently designed and deployed. For the sales decisions of “who to follow up with, what to say, and when to hand off to a human”, prompt engineering lets a single model call output six-dimensional structured analysis — intent classification, stage judgment, risk assessment and more — each with confidence scores and reasoning, making every AI suggestion explainable and traceable.',
       },
       {
         id: 'ai-collab',
@@ -163,6 +168,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
           },
         ],
         footer: 'Milestone breakdown · Prompt engineering · Long-horizon context management · Automated acceptance',
+        desc: 'A 3D mystery game built in collaboration with an LLM: adapting an entire detective novel into a playable first-person game. I designed a human-AI workflow of “model reads the novel → self-distilled prompts → human review & calibration → staged execution”, with milestone-based breakdown and per-stage acceptance; humans only defined requirements and made key decisions while AI completed 70%+ of the execution, delivering a complete, playable game.',
       },
       {
         id: 'ai-review',
@@ -179,6 +185,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
           },
         ],
         footer: 'Real-scenario stress tests · Head-to-head comparisons · Selection advice',
+        desc: 'Contributing writer for a 200K+ follower tech media account, reviewing LLMs, office agents, video generation and other AI tools from a PM’s perspective. Instead of relying on official demos or leaderboards, I design extreme real-world tasks for head-to-head comparisons, forming selection judgments across quality, cost and scenario fit. 100K+ total reads, top single piece 50K+, with multiple deep first-reviews within two days of product launches.',
       },
     ],
   },

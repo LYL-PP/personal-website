@@ -932,8 +932,8 @@ canvas {
   align-items: stretch;
   height: 100%;
   /* 板块间无 gap，边到边相连 */
-  /* 起始整排推到视口右缘外：左留白 = 一整屏，滚动时卡片从右侧依次滑入 */
-  padding-left: 100vw;
+  /* 起始整排推到视口右缘外：左留白 = 半屏（原一整屏），滚动时卡片更快从右侧滑入 */
+  padding-left: 50vw;
   padding-right: 0;
   will-change: transform;
 }

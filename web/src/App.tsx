@@ -45,27 +45,21 @@ const COPY = {
 
 function Hero({ lang, cueOpacity }: { lang: Lang; cueOpacity: MotionValue<number> }) {
   const { title, paragraphs } = COPY[lang]
-  const aboutRef = useRef(null)
-  // 触发起点：about 顶部位于视口 95% 处为进度 0，到达视口顶部为进度 1。
-  // 起点取 0.95 而非更早：about 块含多段正文+图标行后较高，块顶在首屏已高于视口 60%，
-  // 若从 0.6 起算，页面未滚动时淡出进度就已过半（标题发虚）。
-  const { scrollYProgress } = useScroll({
-    target: aboutRef,
-    offset: ['start 0.95', 'start start'],
-  })
-  // 滚动前半程完成模糊+透明淡出（约 0.45 倍视口高度的滚动内）
-  const blur = useTransform(scrollYProgress, [0, 0.5], ['blur(0px)', 'blur(16px)'])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  // 淡出/视差直接由窗口滚动距离驱动，而非 about 元素位置：
+  // about 块较高（多段正文+图标行）时，按元素位置算的进度在页面顶端就已接近走完，
+  // 标题会"出生即透明"。按绝对滚动距离（px）驱动则与块高无关，行为确定。
+  const { scrollY } = useScroll()
+  const blur = useTransform(scrollY, [0, 320], ['blur(0px)', 'blur(16px)'])
+  const opacity = useTransform(scrollY, [0, 320], [1, 0])
   // 视差：标题上升更快、字距随滚动拉开；正文上升慢一点
-  const titleY = useTransform(scrollYProgress, [0, 1], [0, -96])
-  const bodyY = useTransform(scrollYProgress, [0, 1], [0, -52])
-  const titleSpacing = useTransform(scrollYProgress, [0, 1], ['0.01em', '0.42em'])
+  const titleY = useTransform(scrollY, [0, 800], [0, -96])
+  const bodyY = useTransform(scrollY, [0, 800], [0, -52])
+  const titleSpacing = useTransform(scrollY, [0, 800], ['0.01em', '0.42em'])
   return (
     <section className="hero">
       <motion.div
         className="about"
         lang={lang}
-        ref={aboutRef}
         style={{ filter: blur, opacity }}
       >
         {/* 入场动画放内层，避免其 fill 锁住 opacity 覆盖外层滚动 opacity */}

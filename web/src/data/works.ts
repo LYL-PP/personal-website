@@ -197,7 +197,10 @@ export const SECTION_SHOTS: Record<string, string[]> = {
     `${import.meta.env.BASE_URL}works/covers/ai-collab-2.png`,
     `${import.meta.env.BASE_URL}works/covers/ai-collab-3.png`,
   ],
-  'ai-review': [`${import.meta.env.BASE_URL}works/covers/ai-review.png`],
+  'ai-review': [
+    `${import.meta.env.BASE_URL}works/covers/ai-review.png`,
+    `${import.meta.env.BASE_URL}works/covers/ai-review-2.png`,
+  ],
 }
 
 // 统计一个板块的作品数（items 或 groups 求和），用于索引行 hover 显示

@@ -25,16 +25,11 @@ type Lang = 'en' | 'zh'
 const COPY = {
   en: {
     title: 'About LU',
-    paragraphs: [
-      'Product Manager',
-      'Business × Data Science',
-      'CICC · JD.com',
-      'AI · Commercialization · Supply Chain · Finance',
-    ],
+    paragraphs: [],
   },
   zh: {
     title: 'About LU',
-    paragraphs: ['产品经理', '商科 × 数据科学', '中金·京东', 'AI·商业化·供应链·金融'],
+    paragraphs: [],
   },
 }
 
@@ -194,6 +189,15 @@ export default function App() {
         </div>
         <div className="hero-meta hm-bl">AI · Product · Data</div>
         <div className="hero-meta hm-right">深圳</div>
+        {/* 底部左右两行小字（随滚动随角标一起淡出） */}
+        <div className="hero-meta hm-lines-l">
+          <span className="hm-line">产品经理</span>
+          <span className="hm-line">商科 × 数据科学</span>
+        </div>
+        <div className="hero-meta hm-lines-r">
+          <span className="hm-line">中金 · 京东</span>
+          <span className="hm-line">AI · 商业化 · 供应链 · 金融</span>
+        </div>
       </motion.div>
 
       {/* 全屏胶片噪点蒙层（multiply 混合） */}

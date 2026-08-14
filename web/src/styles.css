@@ -254,6 +254,20 @@ canvas {
 .hero-meta .hm-sub {
   display: block;
 }
+/* 底部左右两行小字 */
+.hero-meta .hm-line {
+  display: block;
+}
+.hm-lines-l {
+  left: 15%;
+  bottom: calc(var(--m) + 48px);
+  text-align: center;
+}
+.hm-lines-r {
+  right: 15%;
+  bottom: calc(var(--m) + 48px);
+  text-align: center;
+}
 .hm-tl {
   top: calc(var(--m) + 16px);
   left: calc(var(--m) + 20px);

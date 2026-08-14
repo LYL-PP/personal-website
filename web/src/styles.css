@@ -286,6 +286,8 @@ canvas {
   letter-spacing: 0.01em;
   color: var(--ink);
   margin-bottom: 0.3em;
+  /* 亮色场景下保证可读：深色投影压出对比 */
+  text-shadow: 0 2px 28px rgba(5, 8, 14, 0.6), 0 1px 8px rgba(5, 8, 14, 0.45);
 }
 
 .about-body {
@@ -296,6 +298,42 @@ canvas {
   font-size: clamp(8px, 1.05vw, 16px);
   line-height: 1.2;
   color: var(--ink);
+  text-shadow: 0 1px 14px rgba(5, 8, 14, 0.55);
+}
+
+/* 首屏联系方式图标行（容器 pointer-events:none，图标单独开启可点） */
+.about-contact {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+.about-contact a,
+.about-contact .is-ph {
+  pointer-events: auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 241, 234, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(244, 241, 234, 0.92);
+  background: rgba(5, 8, 14, 0.18);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.about-contact a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(244, 241, 234, 0.9);
+  background: rgba(5, 8, 14, 0.32);
+}
+.about-contact svg {
+  width: 18px;
+  height: 18px;
+}
+.about-contact .is-ph {
+  opacity: 0.55;
+  cursor: default;
 }
 
 /* 正文内链接：容器是 pointer-events:none，链接需单独开启可点 */

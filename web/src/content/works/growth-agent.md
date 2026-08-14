@@ -1,5 +1,5 @@
 ---
-title: AI 销售增长智能体（Growth Agent）
+title: AI 销售增长智能体\nGrowth Agent
 banner: /works/covers/ai-demo.png
 year: 2026
 role: 独立设计 / 开发
@@ -13,7 +13,7 @@ link: https://ai-sales-growth-agent.vercel.app/
 
 ## 产品形态
 
-定义「AI 销售副驾驶」产品形态，围绕销售**「该跟谁、说什么、要不要转人工」**的决策链路，设计三大模块：
+定义「AI 销售副驾驶」产品形态，围绕销售「**该跟谁、说什么、要不要转人工**」的决策链路，设计三大模块：
 
 - **运营总览 Dashboard** —— 线索与转化的整体态势一屏掌握
 - **AI 对话分析** —— 单次模型调用并行输出六维结构化分析

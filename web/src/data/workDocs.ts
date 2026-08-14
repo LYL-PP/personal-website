@@ -50,7 +50,8 @@ function parseFrontmatter(raw: string): {
         .map((s) => s.trim().replace(/^['"]|['"]$/g, ''))
         .filter(Boolean)
     } else {
-      val = rawVal.replace(/^['"]|['"]$/g, '')
+      // 支持字面 \n 表示换行（如标题分两行）
+      val = rawVal.replace(/^['"]|['"]$/g, '').replace(/\\n/g, '\n')
     }
     data[mm[1]] = val
   }

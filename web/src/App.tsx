@@ -191,9 +191,12 @@ export default function App() {
         <span className="hero-mark br">+</span>
         <div className="hero-meta hm-tl">
           <span className="hm-name">陆星竹</span>
-          <span>产品经理 · AI</span>
+          <span className="hm-en">LU XINGZHU</span>
         </div>
-        <div className="hero-meta hm-tr">Portfolio — 2026</div>
+        <div className="hero-meta hm-tr">
+          Portfolio — 2026
+          <span className="hm-sub">产品经理 · AI</span>
+        </div>
         <div className="hero-meta hm-bl">AI · Product · Data</div>
         <div className="hero-meta hm-right">深圳</div>
       </motion.div>

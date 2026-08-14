@@ -240,6 +240,18 @@ canvas {
   font-weight: 700;
   color: rgba(244, 241, 234, 0.95);
 }
+/* 左上第二行：拼音花体（Lobster 仅 400 字重，本身即粗体风格） */
+.hero-meta .hm-en {
+  display: block;
+  font-family: 'Lobster', cursive;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: rgba(244, 241, 234, 0.95);
+}
+/* 右上第二行（职位） */
+.hero-meta .hm-sub {
+  display: block;
+}
 .hm-tl {
   top: calc(var(--m) + 16px);
   left: calc(var(--m) + 20px);

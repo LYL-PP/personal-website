@@ -284,6 +284,17 @@ export default function Works({ lang, innerRef }: { lang: 'en' | 'zh'; innerRef:
   // 横移到底时「继续下滑」提示渐隐
   const hintOpacity = useTransform(scrollYProgress, [0.85, 1], [1, 0])
 
+  // 对角入场：gallery 顶部从视口底滑到视口顶（被钉住前）的过程中，
+  // 整排卡片从视口右下方向左上方纯平移入画；钉住时偏移归零，与横移无缝衔接。
+  // 窄屏（移动端竖排堆叠）不启用。
+  const { scrollYProgress: enterProgress } = useScroll({
+    target: galleryRef,
+    offset: ['start end', 'start start'],
+  })
+  const narrow = typeof window !== 'undefined' && window.innerWidth <= 640
+  const enterX = useTransform(enterProgress, [0, 1], [narrow ? '0vw' : '55vw', '0vw'])
+  const enterY = useTransform(enterProgress, [0, 1], [narrow ? '0vh' : '65vh', '0vh'])
+
   // 详情打开时锁滚动 + ESC 关闭
   useEffect(() => {
     if (!active) return
@@ -320,10 +331,12 @@ export default function Works({ lang, innerRef }: { lang: 'en' | 'zh'; innerRef:
         <div className="wk-gallery-sticky">
           <span className="wk-gallery-title">{data.title}</span>
 
-          <motion.div className="wk-track" ref={trackRef} style={{ x }}>
-            {sections.map((s) => (
-              <SectionCard key={s.id} section={s} data={data} onOpen={setActive} onZoom={setZoom} />
-            ))}
+          <motion.div className="wk-track-enter" style={{ x: enterX, y: enterY }}>
+            <motion.div className="wk-track" ref={trackRef} style={{ x }}>
+              {sections.map((s) => (
+                <SectionCard key={s.id} section={s} data={data} onOpen={setActive} onZoom={setZoom} />
+              ))}
+            </motion.div>
           </motion.div>
 
           <div className="wk-progress" aria-hidden="true">

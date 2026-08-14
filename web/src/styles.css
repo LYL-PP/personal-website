@@ -938,6 +938,12 @@ canvas {
   will-change: transform;
 }
 
+/* 对角入场包装层：入场偏移 + 轨道横移两个 transform 父子叠加 */
+.wk-track-enter {
+  height: 100%;
+  will-change: transform;
+}
+
 /* 全高板块：单栏（编号 + 标题 + 作品清单）。
    标题固定在顶部偏下同一高度（flex-start，不随清单长短漂移） */
 .wk-card {
@@ -1651,6 +1657,10 @@ canvas {
     height: auto;
     padding-left: 0; /* 取消右缘外整屏留白 */
     transform: none !important; /* 覆盖 framer-motion 的 translateX */
+  }
+  .wk-track-enter {
+    height: auto;
+    transform: none !important; /* 移动端不对角入场 */
   }
   .wk-card {
     width: 100%;

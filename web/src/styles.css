@@ -443,6 +443,12 @@ canvas {
   padding-left: 34px;
   /* 条目间距：约 46vh 的 1/3（相机按条目实测位置停靠，压缩间距不影响运镜对齐） */
   padding-bottom: 15vh;
+  /* 悬浮放大：以条目为单位，原点取左侧（时间轴圆点一侧），放大时不移位 */
+  transform-origin: left center;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.tl-entry:hover {
+  transform: scale(1.03);
 }
 
 .tl-entry:last-child {

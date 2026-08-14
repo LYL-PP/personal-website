@@ -83,7 +83,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
       {
         id: 'ai-collab',
         no: '02',
-        title: 'AI 协作开发',
+        title: 'AI 协作开发 3D 游戏',
         tagline: '人机协作工作流 · 从 0 到 1',
         items: [
           {
@@ -143,7 +143,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
       {
         id: 'ai-collab',
         no: '02',
-        title: 'AI-Assisted Development',
+        title: 'AI-Assisted 3D Game Dev',
         tagline: 'Human-AI workflow · 0 to 1',
         items: [
           {

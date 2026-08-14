@@ -31,13 +31,3 @@ link: https://ai-game-liard.vercel.app/
 ## 技术栈
 
 Three.js + 原生 JavaScript，数据驱动架构。
-
-## 游戏截图
-
-![【游戏截图 1】](/works/soldier-island/shot-1.jpg)
-
-![【游戏截图 2】](/works/soldier-island/shot-2.jpg)
-
-![【游戏截图 3】](/works/soldier-island/shot-3.jpg)
-
-![【游戏截图 4】](/works/soldier-island/shot-4.jpg)

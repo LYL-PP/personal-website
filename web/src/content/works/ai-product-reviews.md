@@ -4,6 +4,7 @@ banner: /works/covers/ai-review.png
 year: 2026
 role: 独立撰稿（20W+ 粉丝科技公众号合作撰稿人）
 tags: [AI 产品评测, 内容创作, 累计阅读 10w+]
+link: https://mp.weixin.qq.com/s/oiN69Kk3XYASMYavwoXzyA
 ---
 
 以产品经理视角独立输出 AI 产品深度评测，覆盖大模型、国产办公 Agent、视频生成、游戏生成等多类工具，**累计阅读量 10w+、单篇最高 5w+**。
@@ -16,6 +17,6 @@ tags: [AI 产品评测, 内容创作, 累计阅读 10w+]
 
 ## 代表文章
 
-- 【文章链接 1：文章标题】
-- 【文章链接 2：文章标题】
-- 【文章链接 3：文章标题】
+- [实测 Kimi K3 两天，3D 游戏可以给到夯！（阅读 5.4w+）](https://mp.weixin.qq.com/s/oiN69Kk3XYASMYavwoXzyA)
+- 【文章链接：文章标题】
+- 【文章链接：文章标题】

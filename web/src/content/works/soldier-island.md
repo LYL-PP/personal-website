@@ -1,5 +1,6 @@
 ---
 title: 3D 叙事推理游戏《无人生还：士兵岛》
+banner: /works/covers/ai-collab.png
 year: 2026
 role: 独立主导 · 全程与大模型协作开发
 tags: [AI 协作开发, Three.js, 数据驱动架构]

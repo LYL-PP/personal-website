@@ -200,6 +200,7 @@ export const SECTION_SHOTS: Record<string, string[]> = {
   'ai-review': [
     `${import.meta.env.BASE_URL}works/covers/ai-review.png`,
     `${import.meta.env.BASE_URL}works/covers/ai-review-2.png`,
+    `${import.meta.env.BASE_URL}works/covers/ai-review-3.png`,
   ],
 }
 

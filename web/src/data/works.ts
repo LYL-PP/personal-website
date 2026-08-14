@@ -174,12 +174,12 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
   },
 }
 
-// 板块配图（横向画廊每张卡片左侧的整高封面）。放到 public/works/covers/ 下。
-// 缺图时左栏用大编号渐变占位，放入图片后自动点亮。
-export const SECTION_COVERS: Record<string, string> = {
-  'ai-demo': `${import.meta.env.BASE_URL}works/covers/ai-demo.png`,
-  'ai-collab': `${import.meta.env.BASE_URL}works/covers/ai-collab.png`,
-  'ai-review': `${import.meta.env.BASE_URL}works/covers/ai-review.png`,
+// 板块三联图位（每张卡片中部的 3 张项目图）。图片放到 public/works/covers/ 下，
+// 按顺序填入数组；不足 3 张时剩余位置显示虚线占位框，放图后自动点亮。
+export const SECTION_SHOTS: Record<string, string[]> = {
+  'ai-demo': [`${import.meta.env.BASE_URL}works/covers/ai-demo.png`],
+  'ai-collab': [`${import.meta.env.BASE_URL}works/covers/ai-collab.png`],
+  'ai-review': [`${import.meta.env.BASE_URL}works/covers/ai-review.png`],
 }
 
 // 统计一个板块的作品数（items 或 groups 求和），用于索引行 hover 显示

@@ -914,37 +914,33 @@ canvas {
 }
 
 /* 小横图：右侧错落（align-self 右对齐 + 内缩留白），不抢主体 */
-.wk-card-cover {
-  position: relative;
+/* 板块三联图位：每项目 3 张项目图横排，缺图显示虚线占位 */
+.wk-card-shots {
   flex: none;
-  align-self: flex-end;
-  width: clamp(160px, 22vw, 240px);
-  margin-right: clamp(12px, 6%, 80px);
-  aspect-ratio: 3 / 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(10px, 1.4vw, 18px);
+}
+.wk-card-shot {
+  aspect-ratio: 16 / 10;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--line);
   background: #1d2124;
 }
-.wk-card-cover img {
+.wk-card-shot img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-.wk-card-cover-ph {
-  position: absolute;
-  inset: 0;
+.wk-card-shot.is-ph {
   display: grid;
   place-items: center;
-  background: radial-gradient(120% 120% at 30% 25%, rgba(48, 55, 60, 0.5), rgba(29, 33, 36, 0.98));
-}
-.wk-card-cover-no {
-  font-family: 'Cormorant Upright', 'Chiron GoRound TC', 'PingFang SC', serif;
-  font-size: clamp(40px, 7vw, 88px);
-  font-weight: 600;
-  line-height: 1;
-  color: rgba(244, 241, 234, 0.16);
+  border-style: dashed;
+  color: rgba(244, 241, 234, 0.35);
+  font-size: 13px;
+  letter-spacing: 0.08em;
 }
 
 .wk-card-head {
@@ -1514,6 +1510,10 @@ canvas {
   }
   .wk-card:last-child {
     border-right: none;
+  }
+  /* 窄屏三联图改竖排堆叠 */
+  .wk-card-shots {
+    grid-template-columns: 1fr;
   }
   /* 竖排下横移进度条 / 提示无意义 */
   .wk-progress,

@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
-import { WORKS, SECTION_COVERS, type WorkListItem, type WorkSection, type WorksLang } from '../data/works'
+import { WORKS, SECTION_SHOTS, type WorkListItem, type WorkSection, type WorksLang } from '../data/works'
 import { getWorkDoc } from '../data/workDocs'
 
 const EASE = [0.22, 1, 0.36, 1]
@@ -31,7 +31,7 @@ function WorkLine({ item, onOpen }: { item: WorkListItem; onOpen: (item: WorkLis
   )
 }
 
-// 一张全高板块卡：左侧整高配图，右侧文字（编号 + 标题 + 清单）
+// 一张全高板块卡：编号 + 标题 + 三联图位（缺图显示占位）+ 清单
 function SectionCard({
   section,
   data,
@@ -41,8 +41,7 @@ function SectionCard({
   data: WorksLang
   onOpen: (item: WorkListItem) => void
 }) {
-  const [coverError, setCoverError] = useState(false)
-  const cover = SECTION_COVERS[section.id]
+  const shots = SECTION_SHOTS[section.id] ?? []
   return (
     <div className="wk-card">
       <div className="wk-card-head">
@@ -50,13 +49,17 @@ function SectionCard({
         <h3 className="wk-card-title">{section.title}</h3>
         <span className="wk-card-tagline">{section.tagline}</span>
       </div>
-      <div className="wk-card-cover">
-        {cover && !coverError ? (
-          <img src={cover} alt="" onError={() => setCoverError(true)} />
-        ) : (
-          <div className="wk-card-cover-ph" aria-hidden="true">
-            <span className="wk-card-cover-no">{section.no}</span>
-          </div>
+      <div className="wk-card-shots">
+        {[0, 1, 2].map((i) =>
+          shots[i] ? (
+            <div key={i} className="wk-card-shot">
+              <img src={shots[i]} alt={`${section.title} 截图 ${i + 1}`} loading="lazy" />
+            </div>
+          ) : (
+            <div key={i} className="wk-card-shot is-ph" aria-hidden="true">
+              <span>【项目截图 {i + 1}】</span>
+            </div>
+          )
         )}
       </div>
       <SectionWorks section={section} data={data} onOpen={onOpen} />

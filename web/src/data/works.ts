@@ -178,7 +178,11 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
 // 按顺序填入数组；不足 3 张时剩余位置显示虚线占位框，放图后自动点亮。
 export const SECTION_SHOTS: Record<string, string[]> = {
   'ai-demo': [`${import.meta.env.BASE_URL}works/covers/ai-demo.png`],
-  'ai-collab': [`${import.meta.env.BASE_URL}works/covers/ai-collab.png`],
+  'ai-collab': [
+    `${import.meta.env.BASE_URL}works/covers/ai-collab.png`,
+    `${import.meta.env.BASE_URL}works/covers/ai-collab-2.png`,
+    `${import.meta.env.BASE_URL}works/covers/ai-collab-3.png`,
+  ],
   'ai-review': [`${import.meta.env.BASE_URL}works/covers/ai-review.png`],
 }
 

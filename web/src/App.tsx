@@ -26,20 +26,15 @@ const COPY = {
   en: {
     title: 'About LU',
     paragraphs: [
-      'Aspiring AI Product Manager with a hybrid background in business and data science. Three product internships spanning AI products, supply-chain platforms and fintech middle-platforms; independently shipped a live AI product demo and a 3D game, and writes AI product reviews for a tech media account with 200K+ followers. I believe PMs who understand the boundaries of model capabilities will define the products of the next era.',
-      'Skills — AI Products: prompt design & iteration, multi-agent workflow design, knowledge base / RAG application, model evaluation & benchmark design, human-AI collaboration workflows; able to independently ship live product demos via AI-assisted development (Next.js / Three.js).',
-      'Product: requirement analysis & decomposition, business process modeling, PRD writing, prototyping (Axure / Figma) ｜ Data: SQL, Python, Excel ｜ Language: English (CET-6 620 / IELTS 7.0)',
-      'Contact: 18011594058 · applebanana202210@163.com · GitHub: github.com/LYL-PP · WeChat Official Account【名称】',
+      'Product Manager',
+      'Business × Data Science',
+      'CICC · JD.com',
+      'AI · Commercialization · Supply Chain · Finance',
     ],
   },
   zh: {
     title: 'About LU',
-    paragraphs: [
-      'AI 产品经理方向。商科 + 数据科学复合背景，三段产品实习覆盖 AI 产品、供应链中台与金融中台；独立完成过可上线的 AI 产品 Demo 与 3D 游戏，也是 20W+ 粉丝科技公众号的 AI 评测撰稿人。相信理解模型能力边界的产品经理，才能定义下一个时代的产品。',
-      '技能 —— AI 产品：Prompt 设计与迭代、多 Agent 流程设计、知识库/RAG 应用、模型效果评估与评测方案设计、人机协作工作流设计；能以 AI 协作方式独立完成可上线的产品 Demo（Next.js / Three.js）。',
-      '产品能力：需求分析与拆解、业务流程建模、PRD 撰写、原型设计（Axure / Figma）｜数据分析：SQL、Python、Excel｜语言能力：英语（CET-6 620 / IELTS 7.0）',
-      '联系方式：18011594058 · applebanana202210@163.com · GitHub: github.com/LYL-PP · 公众号【名称】',
-    ],
+    paragraphs: ['产品经理', '商科 × 数据科学', '中金·京东', 'AI·商业化·供应链·金融'],
   },
 }
 

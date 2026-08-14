@@ -54,15 +54,17 @@ function WorkLine({
   )
 }
 
-// 一张全高板块卡：编号 + 标题 + 三联图位（缺图显示占位）+ 清单
+// 一张全高板块卡：编号 + 标题 + 三联图位（缺图显示占位，有图可点击放大）+ 清单
 function SectionCard({
   section,
   data,
   onOpen,
+  onZoom,
 }: {
   section: WorkSection
   data: WorksLang
   onOpen: (item: WorkListItem) => void
+  onZoom: (shot: { src: string; alt: string }) => void
 }) {
   const shots = SECTION_SHOTS[section.id] ?? []
   return (
@@ -75,9 +77,15 @@ function SectionCard({
       <div className="wk-card-shots">
         {[0, 1, 2].map((i) =>
           shots[i] ? (
-            <div key={i} className="wk-card-shot">
-              <img src={shots[i]} alt={`${section.title} 截图 ${i + 1}`} loading="lazy" />
-            </div>
+            <button
+              key={i}
+              type="button"
+              className="wk-card-shot"
+              onClick={() => onZoom({ src: shots[i], alt: `${section.title} 截图 ${i + 1}` })}
+              aria-label={`放大查看 ${section.title} 截图 ${i + 1}`}
+            >
+              <img src={shots[i]} alt="" loading="lazy" />
+            </button>
           ) : (
             <div key={i} className="wk-card-shot is-ph" aria-hidden="true">
               <span>【项目截图 {i + 1}】</span>
@@ -245,6 +253,7 @@ export default function Works({ lang, innerRef }: { lang: 'en' | 'zh'; innerRef:
   const count = sections.length
 
   const [active, setActive] = useState<WorkListItem | null>(null) // 当前打开详情的作品 item
+  const [zoom, setZoom] = useState<{ src: string; alt: string } | null>(null) // 当前放大的截图
 
   // 竖滚 pin 转横移：测量整排卡片的实际可横移距离（px），竖滚进度 → 横移
   const galleryRef = useRef<HTMLDivElement>(null)
@@ -288,6 +297,19 @@ export default function Works({ lang, innerRef }: { lang: 'en' | 'zh'; innerRef:
     }
   }, [active])
 
+  // 截图放大（灯箱）打开时锁滚动 + ESC 关闭
+  useEffect(() => {
+    if (!zoom) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setZoom(null)
+    window.addEventListener('keydown', onKey)
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = prev
+    }
+  }, [zoom])
+
   return (
     <section className="works" lang={lang} ref={innerRef}>
       <div
@@ -300,7 +322,7 @@ export default function Works({ lang, innerRef }: { lang: 'en' | 'zh'; innerRef:
 
           <motion.div className="wk-track" ref={trackRef} style={{ x }}>
             {sections.map((s) => (
-              <SectionCard key={s.id} section={s} data={data} onOpen={setActive} />
+              <SectionCard key={s.id} section={s} data={data} onOpen={setActive} onZoom={setZoom} />
             ))}
           </motion.div>
 
@@ -321,6 +343,34 @@ export default function Works({ lang, innerRef }: { lang: 'en' | 'zh'; innerRef:
             data={data}
             onClose={() => setActive(null)}
           />
+        )}
+      </AnimatePresence>
+
+      {/* 截图灯箱：点击图位放大查看原图，点背景 / ✕ / ESC 关闭 */}
+      <AnimatePresence>
+        {zoom && (
+          <>
+            <motion.div
+              className="wk-zoom-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={() => setZoom(null)}
+            />
+            <motion.figure
+              className="wk-zoom"
+              initial={{ opacity: 0, scale: 0.94 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.97 }}
+              transition={{ duration: 0.32, ease: EASE }}
+            >
+              <button className="wk-zoom-close" onClick={() => setZoom(null)} aria-label={data.closeLabel}>
+                ✕
+              </button>
+              <img src={zoom.src} alt={zoom.alt} />
+            </motion.figure>
+          </>
         )}
       </AnimatePresence>
     </section>

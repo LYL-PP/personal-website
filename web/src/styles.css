@@ -1316,7 +1316,6 @@ canvas {
   font-size: clamp(12px, 1.15vw, 14px);
   line-height: 1.85;
   color: rgba(244, 241, 234, 0.62);
-  max-width: 62ch;
 }
 
 /* 中文作品区：行距放宽 */

@@ -236,7 +236,9 @@ canvas {
 .hero-meta .hm-name {
   display: block;
   text-transform: none;
-  letter-spacing: 0.1em;
+  /* 两端对齐：容器宽 = 最宽行（英文花体行），中文名自动拉开字距与之同宽 */
+  text-align: justify;
+  text-align-last: justify;
   font-weight: 700;
   color: rgba(244, 241, 234, 0.95);
 }

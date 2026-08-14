@@ -56,6 +56,15 @@ function Hero({ lang, cueOpacity }: { lang: Lang; cueOpacity: MotionValue<number
         <div className="about-intro">
           <motion.h1 className="about-title" style={{ y: titleY, letterSpacing: titleSpacing }}>
             {title}
+            {/* 标题左右两侧的两行小字（随标题一起视差/淡出） */}
+            <span className="about-side is-l" aria-hidden="true">
+              <span className="about-side-line">产品经理</span>
+              <span className="about-side-line">商科 × 数据科学</span>
+            </span>
+            <span className="about-side is-r" aria-hidden="true">
+              <span className="about-side-line">中金 · 京东</span>
+              <span className="about-side-line">AI · 商业化 · 供应链 · 金融</span>
+            </span>
           </motion.h1>
           {paragraphs.map((p, i) => (
             <motion.p key={i} className="about-body" style={{ y: bodyY }}>
@@ -189,15 +198,6 @@ export default function App() {
         </div>
         <div className="hero-meta hm-bl">AI · Product · Data</div>
         <div className="hero-meta hm-right">深圳</div>
-        {/* 底部左右两行小字（随滚动随角标一起淡出） */}
-        <div className="hero-meta hm-lines-l">
-          <span className="hm-line">产品经理</span>
-          <span className="hm-line">商科 × 数据科学</span>
-        </div>
-        <div className="hero-meta hm-lines-r">
-          <span className="hm-line">中金 · 京东</span>
-          <span className="hm-line">AI · 商业化 · 供应链 · 金融</span>
-        </div>
       </motion.div>
 
       {/* 全屏胶片噪点蒙层（multiply 混合） */}

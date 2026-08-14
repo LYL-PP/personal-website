@@ -254,20 +254,6 @@ canvas {
 .hero-meta .hm-sub {
   display: block;
 }
-/* 底部左右两行小字 */
-.hero-meta .hm-line {
-  display: block;
-}
-.hm-lines-l {
-  left: 15%;
-  bottom: calc(var(--m) + 48px);
-  text-align: center;
-}
-.hm-lines-r {
-  right: 15%;
-  bottom: calc(var(--m) + 48px);
-  text-align: center;
-}
 .hm-tl {
   top: calc(var(--m) + 16px);
   left: calc(var(--m) + 20px);
@@ -308,6 +294,7 @@ canvas {
 }
 
 .about-title {
+  position: relative;
   font-family: 'Archivo Black', 'Mansalva', sans-serif;
   font-weight: 400;
   font-size: clamp(40px, 10vw, 128px);
@@ -317,6 +304,32 @@ canvas {
   margin-bottom: 0.3em;
   /* 亮色场景下保证可读：深色投影压出对比 */
   text-shadow: 0 2px 28px rgba(5, 8, 14, 0.6), 0 1px 8px rgba(5, 8, 14, 0.45);
+}
+
+/* 标题左右两侧的两行小字：绝对定位于标题两侧、与标题垂直居中 */
+.about-side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: max-content;
+  font-family: 'Chiron GoRound TC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: clamp(12px, 1.35vw, 17px);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  line-height: 1.7;
+  color: rgba(244, 241, 234, 0.78);
+  text-shadow: 0 1px 12px rgba(5, 8, 14, 0.55);
+}
+.about-side.is-l {
+  right: calc(100% + 3vw);
+  text-align: right;
+}
+.about-side.is-r {
+  left: calc(100% + 3vw);
+  text-align: left;
+}
+.about-side-line {
+  display: block;
 }
 
 .about-body {

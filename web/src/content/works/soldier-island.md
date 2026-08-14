@@ -4,7 +4,10 @@ banner: /works/covers/ai-collab.png
 year: 2026
 role: 独立主导 · 全程与大模型协作开发
 tags: [AI 协作开发, Three.js, 数据驱动架构]
+link: https://ai-game-liard.vercel.app/
 ---
+
+> **在线体验：** [https://ai-game-liard.vercel.app/](https://ai-game-liard.vercel.app/)
 
 独立主导并全程与大模型协作完成第一人称 3D 叙事推理游戏的从 0 到 1 开发。
 

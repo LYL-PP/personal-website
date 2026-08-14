@@ -19,4 +19,4 @@ link: https://mp.weixin.qq.com/s/oiN69Kk3XYASMYavwoXzyA
 
 - [实测 Kimi K3 两天，3D 游戏可以给到夯！（阅读 5.4w+）](https://mp.weixin.qq.com/s/oiN69Kk3XYASMYavwoXzyA)
 - [中国开源「双子星」，把全球模型榜包圆了](https://mp.weixin.qq.com/s/IDkLBez0Mc1A5GtmW1BWfQ)
-- [Seko 深度实测：一句话到成片的 AI 短剧工具](https://mp.weixin.qq.com/s/eZpJEqqOTCPZhXZJozqVqQ)
+- [不会写提示词也能拍短剧？一个小白的 Seko 通关记录](https://mp.weixin.qq.com/s/eZpJEqqOTCPZhXZJozqVqQ)

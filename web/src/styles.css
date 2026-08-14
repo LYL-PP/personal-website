@@ -225,17 +225,19 @@ canvas {
 /* 角标元数据小字 */
 .hero-meta {
   position: absolute;
-  font-size: clamp(9px, 0.9vw, 11px);
-  letter-spacing: 0.26em;
+  font-size: clamp(12px, 1.35vw, 17px);
+  font-weight: 600;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   line-height: 1.6;
-  color: rgba(244, 241, 234, 0.46);
+  color: rgba(244, 241, 234, 0.78);
 }
 .hero-meta .hm-name {
   display: block;
   text-transform: none;
-  letter-spacing: 0.12em;
-  color: rgba(244, 241, 234, 0.7);
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: rgba(244, 241, 234, 0.95);
 }
 .hm-tl {
   top: calc(var(--m) + 16px);

@@ -67,7 +67,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
       {
         id: 'ai-demo',
         no: '01',
-        title: 'AI 智能销售产品 Demo',
+        title: 'AI 销售智能体产品 Demo',
         tagline: '可交互产品 Demo · 已部署上线',
         items: [
           {
@@ -127,7 +127,7 @@ export const WORKS: Record<'zh' | 'en', WorksLang> = {
       {
         id: 'ai-demo',
         no: '01',
-        title: 'AI Sales Product Demo',
+        title: 'AI Sales Agent Product Demo',
         tagline: 'Interactive demo · Deployed live',
         items: [
           {

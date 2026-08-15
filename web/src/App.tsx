@@ -216,8 +216,7 @@ export default function App() {
             <a href="mailto:applebanana202210@163.com">applebanana202210@163.com</a> ·{' '}
             <a href="https://github.com/LYL-PP" target="_blank" rel="noopener noreferrer">
               GitHub: LYL-PP
-            </a>{' '}
-            · 公众号【名称】
+            </a>
           </p>
           <p className="site-footer-copy">© 2026 陆星竹 · 求职意向：AI 产品经理</p>
         </footer>

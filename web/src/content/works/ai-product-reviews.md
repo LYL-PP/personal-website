@@ -1,6 +1,6 @@
 ---
 title: AI 产品评测内容创作
-banner: /works/covers/ai-review.png
+banner: /works/covers/ai-review-banner.png
 year: 2026
 role: 独立撰稿（20W+ 粉丝科技公众号合作撰稿人）
 tags: [AI 产品评测, 内容创作, 累计阅读 10w+]

@@ -247,6 +247,9 @@ canvas {
   /* 两端对齐：容器宽 = 最宽行（英文花体行），中文名自动拉开字距与之同宽 */
   text-align: justify;
   text-align-last: justify;
+  /* 楷体（优先已加载的霞鹜文楷）+ 加粗 + 比角标大一号 */
+  font-family: 'LXGW WenKai', 'KaiTi', 'STKaiti', serif;
+  font-size: clamp(14px, 1.6vw, 20px);
   font-weight: 700;
   color: rgba(244, 241, 234, 0.95);
 }

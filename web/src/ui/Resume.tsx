@@ -28,6 +28,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2026.09 – 2028.07',
         place: 'The Chinese University of Hong Kong, Shenzhen',
         role: 'M.Sc. in Data Science (enrolled)',
+        logo: { src: `${import.meta.env.BASE_URL}logos/cuhksz.png`, alt: '香港中文大学（深圳）' },
       },
       {
         period: '2022.09 – 2026.07',
@@ -39,6 +40,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2026.01 – 2026.04',
         place: 'Chengdu Shusheng Technology',
         role: 'AI Product Manager Intern',
+        logo: { src: `${import.meta.env.BASE_URL}logos/shusheng.png`, alt: '书声科技' },
         points: [
           'Helped build a sales AI agent covering night-shift standby, conversion Q&A and proactive needs-discovery: designed the collaboration workflow across four agents (intent recognition, needs-discovery, Q&A, safety check) on a modular FAQ / intent / SOP configuration, with a tiered human-handoff mechanism; overall intent-classification F1 90%+, response accuracy 90%+, and 40%+ deal rate on handed-off high-intent leads.',
           'Helped build an AI sales quality-inspection system with differentiated scoring criteria for key actions (needs-discovery, progress review, course pitching, closing); inspection accuracy 95%+.',
@@ -61,6 +63,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2024.12 – 2025.04',
         place: 'CICC (CICC Wealth Management)',
         role: 'Investment Management Middle-Platform Product Intern',
+        logo: { src: `${import.meta.env.BASE_URL}logos/cicc.png`, alt: '中金公司' },
         points: [
           'Contributed to middle-platform systems across the full asset-management product lifecycle (creation, issuance, filing, operation), structuring core elements — risk level, client suitability, fee structure, benchmark, subscription/redemption rules — into system fields and configuration rules.',
           'Built Python-based data automation pipelines processing 100K+ daily records of subscription/redemption flows, NAV and holdings, supporting regulatory reports and post-investment reporting.',
@@ -76,6 +79,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2026.09 – 2028.07',
         place: '香港中文大学（深圳）',
         role: '数据科学 · 硕士（在读）',
+        logo: { src: `${import.meta.env.BASE_URL}logos/cuhksz.png`, alt: '香港中文大学（深圳）' },
       },
       {
         period: '2022.09 – 2026.07',
@@ -87,6 +91,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2026.01 – 2026.04',
         place: '成都书声科技有限公司',
         role: 'AI 产品经理实习生',
+        logo: { src: `${import.meta.env.BASE_URL}logos/shusheng.png`, alt: '书声科技' },
         points: [
           '参与搭建销售 AI 智能体，覆盖夜间值守、转化答疑、主动挖需等场景：设计意图识别、主动挖需、答疑、安全检测四类 Agent 的协作工作流，基于 FAQ 知识库、意图分类与 SOP 模块化配置承接用户咨询，并围绕安全风险、高意向转化、知识边界建立分层转人工机制；项目意图分类整体 F1 达 90%+、用户回复准确率达 90%+，高意向线索转人工后成交率达 40%+；',
           '参与搭建 AI 销售质检体系，围绕挖需、学情点评、铺课、关单等关键动作设计差异化评分标准，质检准确率达 95%+；',
@@ -109,6 +114,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2024.12 – 2025.04',
         place: '中金公司（中金财富）',
         role: '投资管理中台产品实习生',
+        logo: { src: `${import.meta.env.BASE_URL}logos/cicc.png`, alt: '中金公司' },
         points: [
           '围绕资产管理产品全生命周期（创设、发行、备案、运作）参与中台系统建设，将风险等级、客户适当性、费用结构、业绩比较基准、申赎规则等核心要素结构化为系统字段与配置规则；',
           '使用 Python 搭建数据自动化处理流程，日均处理 10w+ 条申赎流水、产品净值及持仓数据，支撑监管报表、投后报告生成；',

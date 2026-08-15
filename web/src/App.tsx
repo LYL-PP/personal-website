@@ -208,6 +208,19 @@ export default function App() {
         <Hero lang={lang} cueOpacity={cueOpacity} />
         <Resume lang={lang} />
         <Works lang={lang} innerRef={worksRef} />
+
+        {/* 页脚收尾：联系方式文字版 + 版权 */}
+        <footer className="site-footer">
+          <p className="site-footer-contact">
+            联系方式：<a href="tel:18011594058">18011594058</a> ·{' '}
+            <a href="mailto:applebanana202210@163.com">applebanana202210@163.com</a> ·{' '}
+            <a href="https://github.com/LYL-PP" target="_blank" rel="noopener noreferrer">
+              GitHub: LYL-PP
+            </a>{' '}
+            · 公众号【名称】
+          </p>
+          <p className="site-footer-copy">© 2026 陆星竹 · 求职意向：AI 产品经理</p>
+        </footer>
       </main>
     </>
   )

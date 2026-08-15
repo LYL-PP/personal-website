@@ -54,9 +54,10 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         role: 'International Supply Chain PM Intern',
         logo: { src: `${import.meta.env.BASE_URL}logos/jd.png`, alt: '京东', size: 75 },
         points: [
-          'Independently led the design of an international supply-chain charging mechanism with a full PRD: abstracted standard billing nodes (inbound, outbound, trunk line, customs clearance, last mile) and consolidated 50+ offline billing scenarios into system modules (fee-item management, rule configuration, service orders, approval, receivables, settlement & reconciliation, exception adjustment), covering a department-level business at tens-of-billions scale.',
-          'Owned the 0-to-1 design and launch of Europe cross-border line products: designed time-priority, cost-priority and balanced route plans validated on end-to-end metrics (on-time fulfillment, delivery success, exception rate, tracking completeness), covering 10+ European countries with 20K+ monthly orders after launch.',
-          'Located fulfillment bottlenecks via the end-to-end metrics system and drove process & product optimization: +15% timely pickup rate, +8% final delivery rate, ~10% overall P&L improvement.',
+          'Independently led the design of the international supply-chain charging mechanism, targeting missed/incorrect charges, manual adjustments and unclear P&L attribution caused by inconsistent billing nodes, fee items and settlement standards across business lines: abstracted standard billing nodes (inbound, outbound, trunk line, customs clearance, last mile) along the fulfillment chain, consolidated 50+ offline billing scenarios into system modules (fee-item management, rule configuration, service orders, approval, receivables, settlement & reconciliation, exception adjustment), and drove requirement reviews and rollout with R&D, settlement, operations and cross-team stakeholders — covering a department-level business at tens-of-billions scale, significantly reducing manual adjustments and missed charges.',
+          'Owned the 0-to-1 design and launch of Europe cross-border line products, coordinating with sales and operations on requirements and commercialization: decomposed business needs by cargo attributes, destination distribution, daily/peak volumes, timeliness, customs and last-mile requirements; designed time-priority, cost-priority and balanced route plans matched with trunk-line, customs and local European carrier resources; validated via trial runs on end-to-end metrics (on-time fulfillment, delivery success, exception rate, tracking completeness), drove commercial launch across 10+ European countries, reaching 20K+ monthly orders with 95%+ delivery success.',
+          'Located fulfillment bottlenecks through data analysis across the end-to-end metrics system (inbound, outbound, pickup, transport, delivery, signed), and drove process and product optimization with operations and support teams: +15% timely pickup rate, +8% final delivery rate, ~10% overall product P&L improvement.',
+          'Continuously tracked international logistics and cross-border supply-chain industry trends, competitor routes and pricing strategies; delivered regular competitor analysis and pricing recommendations, supporting route-product iteration and commercial quote optimization.',
         ],
       },
       {
@@ -105,9 +106,10 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         role: '国际供应链产品经理实习生',
         logo: { src: `${import.meta.env.BASE_URL}logos/jd.png`, alt: '京东', size: 75 },
         points: [
-          '独立主导国际供应链收费机制产品设计，输出完整 PRD：按履约链路抽象入库、出库、干线、清关、尾程等标准计费节点，将 50+ 线下计费场景沉淀为费用项管理、计费规则配置、服务单创建、审批确认、应收生成、结算对账、异常调账等系统模块，覆盖部门级百亿规模业务，显著降低人工调账与漏收风险；',
-          '独立负责欧洲跨境线路产品从 0 到 1 的方案设计与上线：设计时效优先、成本优先与均衡三类线路方案，以端到端时效达成率、准时妥投率、异常率、轨迹回传完整率为核心指标完成试跑验证，覆盖欧洲 10 余国，上线后月均单量 2 万+ 单；',
-          '围绕国际供应链全链路指标体系定位履约瓶颈，推动流程与产品优化，实现及时揽收率提升 15%、尾单妥投率提升 8%、整体损益改善约 10%。',
+          '独立主导国际供应链收费机制产品设计，针对各业务线计费节点、费用项与结算口径不统一导致的漏收错收、人工调账与损益归因不清问题，按履约链路抽象入库、出库、干线、清关、尾程等标准计费节点，将50+线下计费场景沉淀为费用项管理、计费规则配置、服务单创建、审批确认、应收生成、结算对账、异常调账等系统模块，协同研发、结算、运营及跨部门业务团队完成需求评审与方案落地，覆盖部门级百亿规模业务，显著降低人工调账与漏收风险；',
+          '负责欧洲跨境线路产品从0到1的方案设计与上线，协同销售、运营团队完成需求对接与商业化推广：基于货物属性、目的国分布、日均/峰值单量、时效、清关及末端派送要求拆解业务需求，设计时效优先、成本优先与均衡三类线路方案，并匹配干线、清关及欧洲本地服务商资源；以端到端时效达成率、准时妥投率、异常率、轨迹回传完整率为核心指标完成试跑验证，推动线路商业化上线，覆盖欧洲10余国，上线后月均单量2万+单，妥投率95%+；',
+          '围绕国际供应链全链路指标体系（入库、出库、揽收、运输、派送、妥投），通过数据分析定位履约瓶颈，联合经营、运营及综支团队推动流程与产品优化，实现及时揽收率提升15%、尾单妥投率提升8%，相关产品整体损益改善约10%；',
+          '持续跟踪国际物流与跨境供应链行业动态、竞品线路及价格策略，定期输出竞品分析与定价策略建议，支持线路产品迭代与商业化报价优化。',
         ],
       },
       {

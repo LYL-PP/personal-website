@@ -218,7 +218,7 @@ export default function App() {
               GitHub: LYL-PP
             </a>
           </p>
-          <p className="site-footer-copy">© 2026 陆星竹 · 求职意向：AI 产品经理</p>
+          <p className="site-footer-copy">© 2026 陆星竹 · 求职意向：产品经理</p>
         </footer>
       </main>
     </>

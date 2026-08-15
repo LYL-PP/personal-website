@@ -43,8 +43,8 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         logo: { src: `${import.meta.env.BASE_URL}logos/shusheng.png`, alt: '书声科技', size: 50 },
         points: [
           'Helped build a sales AI agent covering night-shift standby, conversion Q&A and proactive needs-discovery: designed the collaboration workflow across four agents (intent recognition, needs-discovery, Q&A, safety check) on a modular FAQ / intent / SOP configuration, with a tiered human-handoff mechanism; overall intent-classification F1 90%+, response accuracy 90%+, and 40%+ deal rate on handed-off high-intent leads.',
-          'Helped build an AI sales quality-inspection system with differentiated scoring criteria for key actions (needs-discovery, progress review, course pitching, closing); inspection accuracy 95%+.',
-          'Helped build a conversation-data-based user profiling & tagging system: designed 100+ tags and extraction rules with T+1 auto-tagging via agents; core tag accuracy 85%+.',
+          'Designed the AI sales quality-inspection system: differentiated scoring criteria for key actions (needs-discovery, progress review, course pitching, closing), upgrading sales professionalism assessment from manual sampling to full automated inspection; established a badcase review and criteria-iteration loop, reaching 95%+ inspection accuracy — significantly cutting manual sampling costs, with results feeding back into sales training and script optimization.',
+          'Contributed to a conversation-data-based user profiling & tagging system: designed 100+ tags (needs / feedback / objections, etc.) and extraction rules, with T+1 auto-tagging via agents and continuous rule iteration; core tag accuracy 85%+, supporting follow-up strategy and precision operations, building reusable user profiles.',
           'Contributed to lead-scoring prediction and conversion strategy on 150K+ historical samples (baseline conversion ~5.4%): feature selection, data cleaning, baseline evaluation and tier thresholds; Top 30% high-potential leads converted at 16.4% (~3× baseline).',
         ],
       },
@@ -94,8 +94,8 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         logo: { src: `${import.meta.env.BASE_URL}logos/shusheng.png`, alt: '书声科技', size: 50 },
         points: [
           '参与搭建销售 AI 智能体，覆盖夜间值守、转化答疑、主动挖需等场景：设计意图识别、主动挖需、答疑、安全检测四类 Agent 的协作工作流，基于 FAQ 知识库、意图分类与 SOP 模块化配置承接用户咨询，并围绕安全风险、高意向转化、知识边界建立分层转人工机制；项目意图分类整体 F1 达 90%+、AI 回复准确率达 90%+，高意向线索转人工后成交率达 40%+；',
-          '参与搭建 AI 销售质检体系，围绕挖需、学情点评、铺课、关单等关键动作设计差异化评分标准，质检准确率达 95%+；',
-          '参与建设基于会话数据的用户画像与标签系统，设计 100+ 标签及抽取规则，结合 Agent 实现 T+1 自动打标与规则迭代，核心标签准确率达 85%+；',
+          '负责AI销售质检体系方案设计，围绕挖需、学情点评、铺课、关单等关键动作设计差异化评分标准，将销售专业度评估从人工抽检升级为全量自动化质检；建立badcase复盘与评分标准迭代机制，质检准确率达95%+，显著降低人工抽检成本，质检结果反哺销售培训与话术优化。',
+          '参与建设基于会话数据的用户画像与标签系统，设计需求/反馈/异议等100+标签及抽取规则，结合Agent实现T+1自动打标与规则迭代，核心标签准确率达85%+，标签结果支撑销售跟进策略制定与精准运营，沉淀可持续复用的用户档案。',
           '参与客户线索分级预测与销售转化策略项目，基于 15w+ 历史样本（基线转化率约 5.4%）设计 AI 侧产品方案，完成特征筛选、数据清洗、baseline 评估与分级阈值设计；内部特征模型下 Top 30% 高潜线索转化率达 16.4%（约 3 倍基线）。',
         ],
       },

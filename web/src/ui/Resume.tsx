@@ -25,13 +25,13 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
     title: 'Résumé',
     entries: [
       {
-        period: '2026.09 – 2028.07',
+        period: '2026.09 – 2028.06',
         place: 'The Chinese University of Hong Kong, Shenzhen',
         role: 'M.Sc. in Data Science (enrolled)',
         logo: { src: `${import.meta.env.BASE_URL}logos/cuhksz.png`, alt: '香港中文大学（深圳）', size: 75 },
       },
       {
-        period: '2022.09 – 2026.07',
+        period: '2022.09 – 2026.06',
         place: 'Sun Yat-sen University',
         role: 'B.B.A. in Business Administration',
         logo: { src: `${import.meta.env.BASE_URL}logos/sysu.png`, alt: '中山大学' },
@@ -77,13 +77,13 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
     title: 'Résumé',
     entries: [
       {
-        period: '2026.09 – 2028.07',
+        period: '2026.09 – 2028.06',
         place: '香港中文大学（深圳）',
         role: '数据科学 · 硕士（在读）',
         logo: { src: `${import.meta.env.BASE_URL}logos/cuhksz.png`, alt: '香港中文大学（深圳）', size: 75 },
       },
       {
-        period: '2022.09 – 2026.07',
+        period: '2022.09 – 2026.06',
         place: '中山大学',
         role: '工商管理 · 本科',
         logo: { src: `${import.meta.env.BASE_URL}logos/sysu.png`, alt: '中山大学' },

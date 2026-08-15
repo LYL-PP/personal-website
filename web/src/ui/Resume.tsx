@@ -28,7 +28,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2026.09 – 2028.07',
         place: 'The Chinese University of Hong Kong, Shenzhen',
         role: 'M.Sc. in Data Science (enrolled)',
-        logo: { src: `${import.meta.env.BASE_URL}logos/cuhksz.png`, alt: '香港中文大学（深圳）' },
+        logo: { src: `${import.meta.env.BASE_URL}logos/cuhksz.png`, alt: '香港中文大学（深圳）', size: 75 },
       },
       {
         period: '2022.09 – 2026.07',
@@ -52,7 +52,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2025.07 – 2025.11',
         place: 'JD.com',
         role: 'International Supply Chain PM Intern',
-        logo: { src: `${import.meta.env.BASE_URL}logos/jd.png`, alt: '京东', size: 60 },
+        logo: { src: `${import.meta.env.BASE_URL}logos/jd.png`, alt: '京东', size: 75 },
         points: [
           'Independently led the design of an international supply-chain charging mechanism with a full PRD: abstracted standard billing nodes (inbound, outbound, trunk line, customs clearance, last mile) and consolidated 50+ offline billing scenarios into system modules (fee-item management, rule configuration, service orders, approval, receivables, settlement & reconciliation, exception adjustment), covering a department-level business at tens-of-billions scale.',
           'Owned the 0-to-1 design and launch of Europe cross-border line products: designed time-priority, cost-priority and balanced route plans validated on end-to-end metrics (on-time fulfillment, delivery success, exception rate, tracking completeness), covering 10+ European countries with 20K+ monthly orders after launch.',
@@ -63,7 +63,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2024.12 – 2025.04',
         place: 'CICC (CICC Wealth Management)',
         role: 'Investment Management Middle-Platform Product Intern',
-        logo: { src: `${import.meta.env.BASE_URL}logos/cicc.png`, alt: '中金公司', size: 60 },
+        logo: { src: `${import.meta.env.BASE_URL}logos/cicc.png`, alt: '中金公司', size: 75 },
         points: [
           'Contributed to middle-platform systems across the full asset-management product lifecycle (creation, issuance, filing, operation), structuring core elements — risk level, client suitability, fee structure, benchmark, subscription/redemption rules — into system fields and configuration rules.',
           'Built Python-based data automation pipelines processing 100K+ daily records of subscription/redemption flows, NAV and holdings, supporting regulatory reports and post-investment reporting.',
@@ -79,7 +79,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2026.09 – 2028.07',
         place: '香港中文大学（深圳）',
         role: '数据科学 · 硕士（在读）',
-        logo: { src: `${import.meta.env.BASE_URL}logos/cuhksz.png`, alt: '香港中文大学（深圳）' },
+        logo: { src: `${import.meta.env.BASE_URL}logos/cuhksz.png`, alt: '香港中文大学（深圳）', size: 75 },
       },
       {
         period: '2022.09 – 2026.07',
@@ -103,7 +103,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2025.07 – 2025.11',
         place: '京东',
         role: '国际供应链产品经理实习生',
-        logo: { src: `${import.meta.env.BASE_URL}logos/jd.png`, alt: '京东', size: 60 },
+        logo: { src: `${import.meta.env.BASE_URL}logos/jd.png`, alt: '京东', size: 75 },
         points: [
           '独立主导国际供应链收费机制产品设计，输出完整 PRD：按履约链路抽象入库、出库、干线、清关、尾程等标准计费节点，将 50+ 线下计费场景沉淀为费用项管理、计费规则配置、服务单创建、审批确认、应收生成、结算对账、异常调账等系统模块，覆盖部门级百亿规模业务，显著降低人工调账与漏收风险；',
           '独立负责欧洲跨境线路产品从 0 到 1 的方案设计与上线：设计时效优先、成本优先与均衡三类线路方案，以端到端时效达成率、准时妥投率、异常率、轨迹回传完整率为核心指标完成试跑验证，覆盖欧洲 10 余国，上线后月均单量 2 万+ 单；',
@@ -114,7 +114,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2024.12 – 2025.04',
         place: '中金公司（中金财富）',
         role: '投资管理中台产品实习生',
-        logo: { src: `${import.meta.env.BASE_URL}logos/cicc.png`, alt: '中金公司', size: 60 },
+        logo: { src: `${import.meta.env.BASE_URL}logos/cicc.png`, alt: '中金公司', size: 75 },
         points: [
           '围绕资产管理产品全生命周期（创设、发行、备案、运作）参与中台系统建设，将风险等级、客户适当性、费用结构、业绩比较基准、申赎规则等核心要素结构化为系统字段与配置规则；',
           '使用 Python 搭建数据自动化处理流程，日均处理 10w+ 条申赎流水、产品净值及持仓数据，支撑监管报表、投后报告生成；',

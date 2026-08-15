@@ -33,6 +33,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2022.09 – 2026.07',
         place: 'Sun Yat-sen University',
         role: 'B.B.A. in Business Administration',
+        logo: { src: `${import.meta.env.BASE_URL}logos/sysu.png`, alt: '中山大学' },
       },
       {
         period: '2026.01 – 2026.04',
@@ -80,6 +81,7 @@ const RESUME: Record<'en' | 'zh', { title: string; entries: ResumeEntry[] }> = {
         period: '2022.09 – 2026.07',
         place: '中山大学',
         role: '工商管理 · 本科',
+        logo: { src: `${import.meta.env.BASE_URL}logos/sysu.png`, alt: '中山大学' },
       },
       {
         period: '2026.01 – 2026.04',
